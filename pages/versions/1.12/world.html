@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>1.12.2 World.java</title>
+        <link rel="stylesheet" href="../../../stylesheets/dictionaryStyle.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li class="active"><a href="../../moddingdictionary.html" class="aactive">Modding Version Dictionaries</a></li>
+                <li class="active"><a href="../../minecraftmods.html" class="inactive">My Minecraft Mods</a></li>
+                <li class="active"><a href="../../../index.html" class="inactive">Home</a></li>
+            </ul>
+            <h1>Turty's Productions</h1>
+        </nav>
+        <form>
+            <div>
+                <button onclick="search()" id="searchButton" type='button'>Search</button>
+                <script>
+                    function search() {
+                        var text = document.getElementById("name").value;
+                        var elements = Array.from(document.getElementsByClassName("items"));
+                        var correctCriteriaElements = [];
+                        elements.forEach(element => {
+                            if((text.split("(")[0] != null && text.split("(")[0] != "undefined" && text.split("(")[0] != "") && (element.textContent.includes(text.split("(")[0]))) {
+                                console.log(element.textContent.split("(")[0])
+                                correctCriteriaElements.push(element);
+                            }
+                        });
+                        correctCriteriaElements[0].scrollIntoView();
+                    }
+                </script>
+
+                <input type="search" id="name" name="name" required minlength="0" maxlength="30" size="30" placeholder="Search for methodName">
+            </div>
+        </form>
+        <section>
+            <p class="headingPara">World.java variables and methods</p>
+            <div class="tip warning">
+                <h6>Documentation for this class is still being worked on and is not yet complete!</h6>
+            </div>
+            <h6>
+                <ul>
+                    <br><br><h6><strong>public static double MAX_ENTITY_RADIUS = 2.0D</strong> is used within the <strong>getEntitiesWithinAABB</strong> functions
+                        to expand the search area for entities. Modders should change this variable to a higher value if it is less than the radius of one of those entities.</h6>
+                    <br><h6><strong>private int seaLevel = 63</strong> is the height at which the sea level is generated at for the world. However the sea level of the 
+                        world is not entirely determined by this value as you can change the sea level in the chunk generator!</h6>
+                    <br><h6><strong>protected boolean scheduledUpdatesAreImmediate</strong> determines whether updates by <strong>scheduleBlockUpdate</strong> happen immediately.
+                        If it is true then they will happen immediately, but if it is false then they will not.</h6>
+                    <br><h6><strong>public final List&lt;Entity&gt; loadedEntityList = Lists.&lt;Entity&gt;newArrayList()</strong> is a list of all the entities in all currently-loaded
+                        chunks.</h6>
+                    <br><h6><strong>protected final List&lt;Entity&gt; unloadedEntityList = Lists.&lt;Entity&gt;newArrayList()</strong> is a list of all the entities in all currently-
+                        unloaded chunks.</h6>
+                    <br><h6><strong>public final List&lt;TileEntity&gt; loadedTileEntityList = Lists.&lt;TileEntity&gt;newArrayList()</strong> is a list of all the tile-entities in all 
+                        currently-loaded chunks.</h6>
+                    <br><h6><strong>public final List&lt;TileEntity&gt; tickableTileEntityList = Lists.&lt;TileEntity&gt;newArrayList()</strong> is a list of all the tickable 
+                        tile-entities.</h6>
+                    <br><h6><strong>public final List&lt;TileEntity&gt; addedTileEntityList = Lists.&lt;TileEntity&gt;newArrayList()</strong> is a list of all the tile-entities
+                        that have been added.</h6>
+                    <br><h6><strong>public final List&lt;TileEntity&gt; tileEntitiesToBeRemoved = Lists.&lt;TileEntity&gt;newArrayList()</strong> is a list of all the tile-entities
+                        that are to be removed(such as when a block is broken that contains a tile-entity).</h6>
+                    <br><h6><strong>public final List&lt;EntityPlayer&gt; playerEntities = Lists.&lt;EntityPlayer&gt;newArrayList()</strong> is an array list of all the players in 
+                        the world.</h6>
+                    <br><h6><strong>public final List&lt;Entity&gt; weatherEffects = Lists.&lt;Entity&gt;newArrayList()</strong> is a list of all the lightning bolt 
+                        entities in the world.</h6>
+                    <br><h6><strong>public final IntHashMap&lt;Entity&gt; entitiesById = new IntHashMap&lt;Entity&gt;()</strong> is a list of all the entities in the world
+                        by their id.</h6>
+                    <br><h6><strong>private final long cloudColour = 1677215L</strong> is the colour of the clouds as a decimal colour converted into a long.</h6>
+                    <br><h6><strong>private int skylightSubtracted</strong> is how much light is subtracted from full daylight.</h6>
+                    <br><h6><strong>protected int updateLCG = (new Random()).nextInt()</strong> contains the current Linear Congruential Generator seed for block updates. 
+                        It is used with an A value of 3 and a C value of <strong>0x3c6ef35f</strong>, producing a highly planar series of values ill-suited for choosing Random
+                        blocks in a 16x128x16 field. <em>This is just an overcomplex and complicated way of saying that it is a random number generator which picks a random block in
+                        a 16x128x16 area.</em></h6>
+                    <br><h6><strong>protected final int DIST_HASH_MAGIC = 1013904223</strong> is a magic number used to generate fast random numbers for 3D distribution within a chunk.</h6>
+                    <br><h6><strong>public float prevRainingStrength</strong> is the strength of the rain during the most recent rainstorm.</h6>
+                    <br><h6><strong>public float rainingStrength</strong> is the strength of the rain during the current rainstorm.</h6>
+                    <br><h6><strong>public float prevThunderStrength</strong> is the strength of the thunder during the most recent thunderstorm.</h6>
+                    <br><h6><strong>public float thunderingStrength</strong> is the strength of the thunder during the current thunderstorm.</h6>
+                    <br><h6><strong>private int lastLightningBolt</strong> is set to <strong>2</strong> whenever a lightning bolt is generated. 
+                        It decrements if it's greater than <strong>0</strong> in <strong>updateWeather()</strong>. Currently, this value is mostly unused.</h6>
+                    <br><h6><strong>public final Random rand = new Random()</strong> is the RNG for the world class and should be used for a random value 
+                        if an instance of <strong>World</strong> is accessible to you instead of initiating a new one.</h6>
+                    <br><h6><strong>public final WorldProvider provider</strong> is the <strong>WorldProvider</strong> instance that <strong>World</strong> uses.</h6>
+                    <br><h6><strong>protected PathWorldListener pathListener = new PathWorldListener()</strong> is an instance of the <strong>PathWorldListener</strong> 
+                        that <strong>World</strong> uses.</h6>
+                    <br><h6><strong>protected List&lt;IWorldEventListener&gt; eventListeners</strong> is the list of event event listeners that <strong>World</strong> utilises.</h6>
+                    <br><h6><strong>protected IChunkProvider chunkProvider</strong> handles the chunk operations and caching for the world.</h6>
+                    <br><h6><strong>protected final ISaveHandler saveHandler</strong> is the interface that handles the saving/saves for the world.</h6>
+                    <br><h6><strong>protected WorldInfo worldInfo</strong> holds information about a world, this includes: size on disk, time, spawn point, seed, player data...</h6>
+                    <br><h6>If <strong>protected boolean findingSpawnPoint</strong> is set then this flag forces a request to load a chunk to load the 
+                        chunk rather than defaulting to the world's <strong>chunkProvider</strong>'s dummy if possible.</h6>
+                    <br><h6><strong>protected MapStorage mapStorage</strong> is what handles all the data for the map of this world such as: saving, loading, setting and getting.</h6>
+                    <br><h6><strong>protected VillageCollection villageCollection</strong> is what handles all the village data and processes 
+                        such as: creating, adding features, finding villages and removing old villages.</h6>
+                    <br><h6><strong>protected LootTableManager lootTable</strong> is what handles and manages all of the loot tables for this world.</h6>
+                    <br><h6><strong>protected AdvancementManager advancementManager</strong> is what handles and manages all of the advancements for this world.</h6>
+                    <br><h6><strong>protected FunctionManager functionManager</strong> is what handles and manages all of the functions for this world.</h6>
+                    <br><h6><strong>public final Profiler profiler</strong> is what handles and manages all of the userdata and profiles for this world.</h6>
+                    <br><h6><strong>private final Calendar calendar</strong> is the calendar that is used by the <strong>World</strong> class.</h6>
+                    <br><h6><strong>protected Scoreboard scoreboard</strong> is the scoreboard for this world.</h6>
+                    <br><h6><strong>public final boolean isRemote</strong> is whether the world is client or server. It is set to true if you are a client connected to a
+                        multiplayer world. Otherwise it will be false. Server Worlds have this set to false, Client Worlds have this set to true.</h6>
+                    <br><h6><strong>protected boolean spawnHostileMobs</strong> indicates whether hostiles entities are spawned or not.</h6>
+                    <br><h6><strong>protected boolean spawnPeacefulMobs</strong> indicates whether peaceful entities are spawned or not.</h6>
+                    <br><h6><strong>private boolean processingLoadedTiles</strong> is a flag that indicates whether the world is processing all of the loaded tile-entities or not.</h6>
+                    <br><h6><strong>private final WorldBorder worldBorder</strong> is the <strong>World Border</strong> that the world uses.</h6>
+                    <br><h6><strong>int[] lightUpdateBlockList</strong> is a temporary list of blocks and light values used when updating light levels. This holds up to 32&sup3; blocks
+                        which is the maximum influence of a light source. Every element is a packed bit value: 0000000000LLLLzzzzzzyyyyyyxxxxxx. The 4 bit L is a light
+                        level used when darkening blocks. 6 bit numbers x,y,z represent the block's offset from the original block, plus 32; i.e a value of 31 would mean an
+                        offset of -1.</h6>
+                    <br><h6><strong>public boolean restoringBlockSnapshots = false</strong> is whether it is getting new snapshots of blocks. These snapshots are purely just data about
+                        a block at the time of when the snapshot is taken. This data includes the dimension, position, mod that its from, block name, metadata, flags, whether it has a 
+                        tile-entity and the tile-entity if it has one.</h6>
+                    <br><h6><strong>public boolean captureBlockSnapshots = false</strong> is whether it should take snapshots of the blocks or not.</h6>
+                    <br><h6><strong>public java.util.ArrayList&lt;net.minecraftforge.common.util.BlockSnapshot&gt; capturedBlockSnapshots = new java.util.ArrayList&lt;net.minecraftforge.common.util.BlockSnapshot&gt;()</strong>
+                        is an array list of all the current block snapshots.</h6>
+                    <br><h6><strong>private net.minecraftforge.common.capabilities.CapabilityDispatcher capabilities</strong> is used to wrap the results of the <strong>AttachCapabilitiesEvent</strong>.
+                        Do not use this approach unless you <strong>MUST</strong> delegate to multiple providers instead of just implement y of the handlers using normal if statements. Internally,
+                        the handlers are baked into arrays for fast iteration. The <strong>ResourceLocation</strong> will be used for the NBT key when serializing.</h6>
+                    <br><h6><strong>private net.minecraftforge.common.util.WorldCapabilityData capabilityData</strong> is all of the data for the world's capabilities.</h6>
+                    <hr>
+                    <br><h6><strong>init()</strong> is a <strong>public World</strong> and must return a <strong>World</strong> as a result. By default in the world class it just returns <strong>this</strong>.
+                        You shouldnt <strong>NOT</strong> change this as it would change how the world works.</h6>
+                    <hr>
+                    <br><h6><strong>getBiome()</strong> is a <strong>public Biome</strong> and takes in a <strong>final BlockPos pos</strong>. This may be used to retrieve the 
+                        biome that is at the specified block position. This returns <strong>this.provider.getBiomeForCoords(pos)</strong>.</h6>
+                    <br><strong>Example:</strong>
+                    <pre><code>Biome biome = worldIn.getBiome(new BlockPos(this.posX, this.posY, this.posZ);
+if(biome.equals(Biomes.BEACH))
+{
+    return true;
+}</code></pre>
+                    <hr>
+                    <br><h6><strong>getBiomeForCoordsBody</strong> is a <strong>public Biome</strong> and takes in a <strong>final BlockPos pos</strong>. This gets the chunk that the
+                        specified position is in, and returns the main biome that is in this chunk.</h6>
+                    <br><strong>An example of how this might be used goes as follows:</strong>
+                    <pre><code>Biome biome = worldIn.getBiomeForCoordsBody(new BlockPos(this.posX, this.posY, this.posZ);
+if(biome.equals(Biomes.BEACH))
+{
+    return true;
+}</code></pre>
+                    <hr>
+                    <br><h6><strong>getBiomeProvider()</strong> is a <strong>public BiomeProvider</strong>. This may be used to get the world's <strong>BiomeProvider</strong> and it 
+                        returns <strong>this.provider.getBiomeProvider()</strong>.</h6>
+                    <br><strong>You could simply use it like this:</strong>
+                    <pre><code>List&lt;Biome&gt; biomes = worldIn.getBiomeProvider().getBiomesToSpawnIn();
+if(biomes.contains(Biomes.DESERT))
+{
+    BlockPos pos = worldIn.getBiomeProvider().findBiomePosition(pos.getX(), pos.getZ(), 1000, (List&lt;Biome&gt;) Biomes.DESERT, worldIn.rand);
+    entityIn.setPosition(pos.getX(), pos.getY(), pos.getZ());
+}</code></pre>  
+                    <hr>
+                    <br><h6><strong>createChunkProvider()</strong> is a <strong>protected abstract IChunkProvider</strong> and creates the chunk provider for this world. 
+                        This is called in the constructor and retrieves the provider from <strong>worldProvider</strong>.</h6>
+                    <hr>
+                    <br><h6><strong>initialize()</strong> is a <strong>public void</strong> and takes in <strong>WorldSettings settings</strong>. This tells the server to be
+                        initialized by doing <strong>this.worldInfo.setServerInitialized(true)</strong>.</h6>
+                    <hr>
+                    <br><h6><strong>getMinecraftServer()</strong> is an <strong>@Nullable public MinecraftServer</strong> and gets the minecraft server for this world. 
+                        It returns <strong>null</strong> by default.</h6>
+                        <br><strong>Example:</strong>
+                        <pre><code>worldIn.getMinecraftServer().setBuildLimit(100);</code></pre>
+                    <hr>
+                    <br><h6><strong>setInitialSpawnLocation()</strong> is an <strong>@SideOnly(Side.CLIENT) public void</strong> and therefore should only be used client side. 
+                        It is used to set a new spawn location by finding an uncovered block at a random(x,z) location in a chunk. 
+                        It returns <strong>this.setSpawnPoint(new BlockPos(8, 64, 8))</strong>.</h6>
+                    <br><strong>An example usage of this goes as follows:</strong>
+                    <pre><code>worldIn.setInitialSpawnLocation();</code></pre>
+                    <hr>
+                    <br><h6><strong>getGroundAboveSeaLevel()</strong> is a <strong>public IBlockState</strong> and takes in <strong>BlockPos pos</strong>.</h6>
+                    <br><strong>One use of this would be to check if the ground above sea level is a particular block and if so set it to another block:</strong>
+                    <pre><code>if(worldIn.getGroundAboveSeaLevel(pos).getBlock().equals(Blocks.DIRT))
+{
+    worldIn.setBlockState(pos, Blocks.MELON.getDefaultState());
+}</code></pre>
+                    <hr>
+                    <br><h6><strong>isValid()</strong> is a <strong>public boolean</strong> and takes in a <strong>BlockPos pos</strong>. This method checks if
+                        the given block position has valid coordinates. This means that it will check that it is not outside the build height and that no x, y or z has a 
+                        value greater than 30 million or less than -30 million.</h6>
+                    <br><strong>An example of it's usage:</strong>
+                    <pre><code>if(worldIn.isValid(pos))
+{
+    playerIn.jump();
+}</code></pre>
+                    <hr>
+                    <br><h6><strong>isOutsideBuildHeight()</strong> is a <strong>public boolean</strong> and takes in a <strong>BlockPos pos</strong> as its parameters.
+                        This method determines whether the block pos is at a valid height(greater than y=0 and less than or equal to 256).</h6>
+                </ul>
+            </h6>
+        </section>
+        <footer>
+            Test
+        </footer>
+    </body>
+</html>
