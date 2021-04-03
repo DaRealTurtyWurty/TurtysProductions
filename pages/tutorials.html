@@ -19,14 +19,14 @@
     </header>
     <section>
         <p class="headingPara">Test Header</p><br>
-        <ul id="tutorials" active="true">
+        <ul id="tutorials">
             <li><span class="caret">Tutorials</span>
-                <ul class="nested" active="true">
+                <ul class="nested">
                     <li>Introduction</li>
                     <li><span class="caret">1.16</span>
-                        <ul class="nested" active="true">
+                        <ul class="nested">
                             <li><span class="caret">Getting Started</span>
-                                <ul class="nested" active="true">
+                                <ul class="nested">
                                     <li>Setting up the Workspace</li>
                                 </ul>
                             </li>
@@ -42,6 +42,8 @@
             var i;
 
             for (i = 0; i < toggler.length; i++) {
+                toggler[i].parentElement.querySelector(".nested").classList.toggle("active");
+                toggler[i].classList.toggle("caret-down");
                 toggler[i].addEventListener("click", function () {
                     this.parentElement.querySelector(".nested").classList.toggle("active");
                     this.classList.toggle("caret-down");
