@@ -1,178 +1,203 @@
 body {
-    background: white;
-    color:black;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
-    padding: 0px;
+  background: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
 }
 
 nav h1 {
-    text-align: center;
-    background-image: url("../images/background.jpg");
-    padding: 100px;
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
-    font-weight: 100;
-    text-shadow: 4px 4px 5px rgb(22, 22, 22);
-    color: rgb(241, 241, 241);
+  text-align: center;
+  background-image: url("../images/background.jpg");
+  padding: 100px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 70px;
+  font-weight: 100;
+  text-shadow: 4px 4px 5px rgb(22, 22, 22);
+  color: rgb(241, 241, 241);
 }
 
 header {
-    background: rgb(247, 247, 247);
-    padding: 0px;
-    margin: 0px;
+  background: rgb(22, 22, 22);
+  padding: 0px;
+  margin: 0px;
 }
 
 nav ul {
-    list-style-type: none;
-    overflow: hidden;
-    background: rgb(247, 247, 247);
-    margin:0px;
-    padding: 20px 0px 20px 0px;
+  list-style-type: none;
+  overflow: hidden;
+  background: rgb(22, 22, 22);
+  margin: 0px;
+  padding: 20px 0px 20px 0px;
 }
 
 nav li {
-    float: right;
-    margin: 0px 20px 0px 0px;
-    padding: 0px 0px 0px 0px;
+  float: right;
+  margin: 0px 20px 0px 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 nav li a.aactive {
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
+  text-decoration: underline;
+  color: white;
 }
 
 nav li a.inactive {
-    text-decoration: none;
-    color: rgb(68, 68, 68);
+  text-decoration: none;
+  color: rgb(168, 168, 168);
 }
 
 section {
-    color: rgb(37, 37, 37);
-    padding: 1px 0px 0px 30px;
-    font-size: 25px;
-    margin: 0px 0px 0px -4px;
-    background: rgb(233, 233, 233);
+  color: rgb(200, 200, 200);
+  padding: 1px 0px 0px 30px;
+  font-size: 25px;
+  margin: 0px 45px 0px 45px;
+  background: rgb(40, 40, 40);
 }
 
 section h6 {
-    color: rgb(80, 80, 80);
-    padding: 0px 10px 5px 7px;
-    font-weight: 100;
-    font-size: 15px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: -12px 0px 0px -8px;
-    background: rgb(233, 233, 233);
+  color: #d3d3d3;
+  padding: 0px 10px 5px 7px;
+  font-weight: 100;
+  font-size: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 15px 200px 0px 37px;
+  background: rgb(40, 40, 40);
+}
+
+section p {
+  margin: 20px 0px 0px 0px;
+  font-size: medium;
+}
+
+section p.headingPara {
+  font-size: x-large;
+  margin: 20px 200px 0px 45px;
+  color: #d3d3d3;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+}
+
+a:visited {
+  text-decoration: none;
+  color: rgb(255, 255, 180);
+  font-weight: 800;
 }
 
 footer {
-    background: rgb(27, 27, 27);
-    color: rgb(27, 27, 27);
-    padding: 40px;
+  background: rgb(27, 27, 27);
+  color: rgb(27, 27, 27);
+  padding: 40px;
 }
 
 section h6 a.hyperlink {
-    text-decoration: none;
-    color: rgb(66, 66, 66);
+  text-decoration: none;
+  color: rgb(66, 66, 66);
 }
 
 section li a.hyperlink {
-    text-decoration: underline rgb(0, 0, 0);
-    color: rgb(66, 66, 66);
+  text-decoration: underline rgb(0, 0, 0);
+  color: rgb(66, 66, 66);
 }
 
 section ul li a {
-    text-decoration: underline rgb(0, 0, 0);
-    color: rgb(66, 66, 66);
+  text-decoration: underline rgb(0, 0, 0);
+  color: rgb(66, 66, 66);
 }
 
 section ul.versions {
-    color: rgb(80, 80, 80);
-    text-decoration: none;
-    padding: 5px 10px 5px 7px;
-    font-weight: 100;
-    font-size: 15px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: -12px 0px 0px 8px;
-    background: rgb(233, 233, 233);
+  color: rgb(80, 80, 80);
+  text-decoration: none;
+  padding: 5px 10px 5px 7px;
+  font-weight: 100;
+  font-size: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: -12px 0px 0px 8px;
+  background: rgb(22, 22, 22);
 }
 
 nav li a.aactive:hover {
-    transition: color 0.3s;
-    color: rgb(124, 124, 124);
+  transition: color 0.3s;
+  color: rgb(180, 180, 180);
 }
 
 nav li a.inactive:hover {
-    transition: color 0.3s;
-    color: rgb(153, 153, 153);
+  transition: color 0.3s;
+  color: rgb(200, 200, 200);
 }
 
 footer {
-    background: rgb(27, 27, 27);
-    color: rgb(27, 27, 27);
-    padding: 180px;
+  background: rgb(27, 27, 27);
+  color: rgb(27, 27, 27);
+  padding: 180px;
 }
 
 .main {
-    background-color: #f4f4f4;
-    min-height: 100vh;
-    padding: 20px;
+  background-color: rgb(22, 22, 22);
+  min-height: 100vh;
+  padding: 20px;
 }
 
 div {
-    display: block;
+  display: block;
 }
 
 .button {
-    text-decoration: none !important;
-    display: inline-block;
-    max-width: 350px;
-    min-height: 200px;
-    background-color: white;
-    border: none;
-    overflow: hidden;
-    color: black !important;
-    position: relative;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border-left: solid #0085ff;
-    border-left-width: 0;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
-    -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0);
-    -moz-box-shadow: 0 0 0 0 rgba(0,0,0,0);
-    box-shadow: 20 0 20 0 rgba(0,0,0,0);
-    transition: -webkit-box-shadow 0.5s, -moz-box-shadow 0.5s, box-shadow 0.5s, border-left-width 0.5s;
+  text-decoration: none !important;
+  display: inline-block;
+  max-width: 350px;
+  min-height: 200px;
+  background-color: black;
+  border: none;
+  overflow: hidden;
+  color: white !important;
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-left: solid #0085ff;
+  border-left-width: 0;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 20 0 20 0 rgba(0, 0, 0, 0);
+  transition: -webkit-box-shadow 0.5s, -moz-box-shadow 0.5s, box-shadow 0.5s,
+    border-left-width 0.5s;
 }
 
 .button.twelve {
-    border-left-color: goldenrod;
+  border-left-color: goldenrod;
 }
 
 .button.fifteen {
-    border-left-color: lightskyblue;
+  border-left-color: lightskyblue;
 }
 
 .button p {
-    padding: 2px;
+  padding: 2px;
 }
 
 .button:hover {
-    -webkit-box-shadow: 0px 12px 65px 0px rgba(0,0,0,0.15);
-    -moz-box-shadow: 0px 12px 65px 0px rgba(0,0,0,0.15);
-    box-shadow: 0px 12px 65px 0px rgba(0,0,0,0.15);
-  
-    border-left-width: 10px;
+  -webkit-box-shadow: 0px 12px 65px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 12px 65px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 12px 65px 0px rgba(0, 0, 0, 0.15);
+
+  border-left-width: 10px;
 }
 
 .button img {
-    width: 100%;
+  width: 100%;
 }
 
 a.orange {
-    color: orange;
+  color: orange;
 }
