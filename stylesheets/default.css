@@ -9,7 +9,7 @@ body {
 h1 {
   text-align: center;
   background-image: url("../images/background.jpg");
-  padding: 100px;
+  padding: 125px 75px 75px 75px;
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 70px;
@@ -58,7 +58,7 @@ nav li a.inactive {
 
 section {
   color: rgb(200, 200, 200);
-  padding: 1px 0px 0px 30px;
+  padding: 1px 0px 300px 30px;
   font-size: 25px;
   margin: 0px 45px 0px 45px;
   background: rgb(40, 40, 50);
@@ -77,10 +77,56 @@ section h6 {
 
 .discord {
   float: right;
-  margin-top: -95px;
-  margin-right: 10px;
+  margin-top: 10px;
+  margin-left: auto;
   width: 20%;
   position: relative;
+}
+
+@media only screen and (min-width: 1920px) {
+  .discord {
+    margin-right: 10px;
+  }
+
+  section {
+    padding: 1px 0px 700px 30px;
+  }
+}
+
+@media only screen and (min-width: 1430px) and (max-width: 1920px) {
+  .discord {
+    margin-right: 7.5%;
+  }
+
+  section {
+    padding: 1px 0px 500px 30px;
+  }
+}
+
+@media only screen and (min-width: 1150px) and (max-width: 1430px) {
+  .discord {
+    margin-right: 15%;
+  }
+
+  section {
+    padding: 1px 0px 400px 30px;
+  }
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1150px) {
+  .discord {
+    margin-right: 22%;
+  }
+
+  section {
+    padding: 1px 0px 300px 30px;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .discord {
+    display: none;
+  }
 }
 
 section h5 {
