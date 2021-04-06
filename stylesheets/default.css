@@ -6,7 +6,7 @@ body {
   padding: 0px;
 }
 
-nav h1 {
+h1 {
   text-align: center;
   background-image: url("../images/background.jpg");
   padding: 100px;
@@ -24,10 +24,18 @@ header {
   margin: 0px;
 }
 
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
 nav ul {
   list-style-type: none;
   overflow: hidden;
-  background: rgb(22, 22, 22);
+  background: rgb(22, 22, 32);
   margin: 0px;
   padding: 20px 0px 20px 0px;
 }
@@ -53,7 +61,7 @@ section {
   padding: 1px 0px 0px 30px;
   font-size: 25px;
   margin: 0px 45px 0px 45px;
-  background: rgb(40, 40, 40);
+  background: rgb(40, 40, 50);
 }
 
 section h6 {
@@ -63,8 +71,27 @@ section h6 {
   font-size: 15px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin: 15px 200px 0px 37px;
-  background: rgb(40, 40, 40);
+  margin: 15px 100px 0px 37px;
+  background: rgb(40, 40, 50);
+}
+
+.discord {
+  float: right;
+  margin-top: -95px;
+  margin-right: 10px;
+  width: 20%;
+  position: relative;
+}
+
+section h5 {
+  color: #d3d3d3;
+  padding: 0px 10px 5px 7px;
+  font-weight: 100;
+  font-size: 18px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 15px 100px 0px 37px;
+  background: rgb(40, 40, 50);
 }
 
 section p {
