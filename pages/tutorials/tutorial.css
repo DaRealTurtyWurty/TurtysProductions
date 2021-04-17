@@ -5,8 +5,17 @@ body {
   font-size: 18px;
 }
 
+:root {
+  --font_color: rgb(200, 200, 200);
+  --nav_background: rgb(22, 22, 32);
+  --background: rgb(22, 22, 22);
+  --section_background: rgb(40, 40, 50);
+  --table_border: rgb(153, 153, 153);
+  --table_background: rgb(90, 90, 100);
+}
+
 body {
-  background: black;
+  background: var(--background);
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
@@ -18,7 +27,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgb(22, 22, 32);
+  background: var(--nav_background);
   margin: 0px;
   padding: 5px 0px;
 }
@@ -34,21 +43,21 @@ body {
 }
 
 .site-header {
-  background: rgb(22, 22, 22);
+  background: var(--background);
   padding: 100px;
   margin: 68px 0 0;
   text-align: center;
   background-image: url("/images/background.jpg");
   font-size: 1.75rem;
   font-weight: 100;
-  text-shadow: 4px 4px 5px rgb(22, 22, 22);
-  color: rgb(241, 241, 241);
+  text-shadow: 4px 4px 5px var(--background);
+  color: var(--font_color);
 }
 
 .main-content {
-  color: rgb(200, 200, 200);
+  color: var(--font_color);
   margin: 0px 45px;
-  background: rgb(40, 40, 50);
+  background: var(--section_background);
   display: grid;
   grid-template-columns: auto auto;
   padding: 25px;
@@ -66,13 +75,13 @@ body {
 
 .main-nav_link a.active:hover {
   transition: color 0.3s;
-  color: rgb(200, 200, 200);
+  color: var(--font_color);
   font-weight: 600;
 }
 
 .main-nav_link a.inactive:hover {
   transition: color 0.3s;
-  color: rgb(200, 200, 200);
+  color: var(--font_color);
   font-weight: 600;
 }
 
@@ -85,8 +94,7 @@ table {
   border-collapse: separate;
   box-sizing: border-box;
   text-indent: initial;
-  border-spacing: 2px;
-  border-color: grey;
+  border-spacing: 3px;
 }
 
 tbody {
@@ -104,16 +112,21 @@ tr {
 th {
   display: table-cell;
   vertical-align: center;
-  color: white;
+  color: rgb(200, 200, 200);
+  font-weight: 100;
   text-align: -internal-center;
 }
 
 table th {
-  background-color: rgb(110, 110, 110);
+  background-color: var(--table_background);
 }
 
 table th,
 table td {
   padding: 0.5em;
-  border: 2px solid #999;
+  border: 1px solid var(--table_border);
+}
+
+a {
+  color: var(--font_color);
 }

@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --font_color: rgb(200, 200, 200);
+  --nav_background: rgb(22, 22, 32);
+  --background: rgb(22, 22, 22);
+  --section_background: rgb(40, 40, 50);
+}
+
 html,
 body {
   width: 100%;
@@ -12,8 +19,8 @@ body {
 }
 
 body {
-  background: black;
-  color: white;
+  background: var(--background);
+  color: var(--font_color);
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
@@ -24,7 +31,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgb(22, 22, 32);
+  background: var(--nav_background);
   margin: 0px;
   padding: 5px 0px;
 }
@@ -40,21 +47,21 @@ body {
 }
 
 .site-header {
-  background: rgb(22, 22, 22);
+  background: var(--background);
   padding: 100px;
   margin: 68px 0 0;
   text-align: center;
-  background-image: url("/images/background.jpg");
+  background-image: url("../images/background.jpg");
   font-size: 1.75rem;
   font-weight: 100;
-  text-shadow: 4px 4px 5px rgb(22, 22, 22);
-  color: rgb(241, 241, 241);
+  text-shadow: 4px 4px 5px var(--background);
+  color: rgb(240, 240, 240);
 }
 
 .main-content {
-  color: rgb(200, 200, 200);
+  color: var(--font_color);
   margin: 0px 45px;
-  background: rgb(40, 40, 50);
+  background: var(--section_background);
   display: grid;
   grid-template-columns: auto auto;
   padding: 25px;
@@ -72,13 +79,13 @@ body {
 
 .main-nav_link a.active:hover {
   transition: color 0.3s;
-  color: rgb(200, 200, 200);
+  color: var(--font_color);
   font-weight: 600;
 }
 
 .main-nav_link a.inactive:hover {
   transition: color 0.3s;
-  color: rgb(200, 200, 200);
+  color: var(--font_color);
   font-weight: 600;
 }
 
@@ -134,4 +141,8 @@ body {
 .discord {
   box-shadow: 0px 0px 15px 10px rgb(0 0 0 / 50%);
   border: transparent;
+}
+
+a {
+  color: var(--font_color);
 }
