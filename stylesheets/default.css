@@ -112,6 +112,10 @@ body {
   padding: 20;
 }
 
+.tree {
+  text-decoration: none;
+}
+
 .caret {
   cursor: pointer;
   user-select: none;
