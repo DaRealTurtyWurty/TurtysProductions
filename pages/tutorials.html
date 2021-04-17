@@ -7,49 +7,53 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/index.html" class="inactive">Home</a></li>
-                <li><a href="tutorials.html" class="aactive">Tutorials</a></li>
-                <li><a href="minecraftmods.html" class="inactive">My Minecraft Mods</a></li>
-            </ul>
-            <h1>Turty's Productions</h1>
-        </nav>
+    <nav class="navigation">
+        <ul class="main-nav">
+            <li class="main-nav_link"><a href="minecraftmods.html" class="inactive">My Minecraft Mods</a></li>
+            <li class="main-nav_link"><a href="tutorials.html" class="active">Tutorials</a></li>
+            <li class="main-nav_link"><a href="/index.html" class="inactive">Home</a></li>
+        </ul>
+    </nav>
+    <header class="site-header">
+        <h1>Turty's Productions</h1>
     </header>
-    <section>
-        <p class="headingPara">Test Header</p><br>
-        <ul id="tutorials">
-            <li><span class="caret">Tutorials</span>
-                <ul class="nested">
-                    <li>Introduction</li>
-                    <li>Conventions</li>
-                    <li><span class="caret">1.16</span>
+    <main class="main-content">
+        <section class="sections">
+            <div class="tutorial-tree">
+                <ul id="tutorials" class="tutorials">
+                    <li><span class="caret">Tutorials</span>
                         <ul class="nested">
-                            <li><span class="caret">Getting Started</span>
+                            <li>Introduction</li>
+                            <li>Conventions</li>
+                            <li><span class="caret">1.16</span>
                                 <ul class="nested">
-                                    <li>Setting up the Workspace</li>
+                                    <li><span class="caret">Getting Started</span>
+                                        <ul class="nested">
+                                            <li>Setting up the Workspace</li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
+                            <li>Setting up a GitHub</li>
                         </ul>
                     </li>
-                    <li>Setting up a GitHub</li>
                 </ul>
-            </li>
-        </ul>
+            </div>
+        </section>
+    </main>
 
-        <script>
-            var toggler = document.getElementsByClassName("caret");
-            var i;
+    <script>
+        var toggler = document.getElementsByClassName("caret");
+        var i;
 
-            for (i = 0; i < toggler.length; i++) {
-                toggler[i].parentElement.querySelector(".nested").classList.toggle("active");
-                toggler[i].classList.toggle("caret-down");
-                toggler[i].addEventListener("click", function () {
-                    this.parentElement.querySelector(".nested").classList.toggle("active");
-                    this.classList.toggle("caret-down");
-                });
-            }
-        </script><br>
-    </section>
+        console.log(toggler)
+        for (i = 0; i < toggler.length; i++) {
+            toggler[i].parentElement.querySelector(".nested").classList.toggle("active");
+            toggler[i].classList.toggle("caret-down");
+            toggler[i].addEventListener("click", function () {
+                this.parentElement.querySelector(".nested").classList.toggle("active");
+                this.classList.toggle("caret-down");
+            });
+        }
+    </script>
 </body>
