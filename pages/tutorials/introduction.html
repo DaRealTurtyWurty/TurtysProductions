@@ -93,13 +93,25 @@
                             is rather complex and big.
                         </th>
                     </tr>
+                    <tr>
+                        <th>
+                            Forge implements all of its hooks into vanilla by patching the source code. This means you
+                            are able to view the vanilla source code and see if forge has patched one of its hooks
+                            there.
+                        </th>
+                        <th>
+                            The forge registry system is considered by some users to be rather clunky and systems like
+                            the DeferredRegister can be considered static-abuse.
+                        </th>
+                    </tr>
                 </tbody>
             </table>
 
             <h4>Fabric</h4>
             <p>Fabric is a fairly new Mod Loader and API for modding Minecraft. Fabric started development during 1.12
                 due to the massive delay between updates. Since Forge then struggled to update from 1.12, it further
-                boosted the development of Fabric as they knew it would gain some traction. There have many, many other
+                boosted the development of Fabric as they knew it would gain some traction. There have been many, many
+                other
                 attempts to compete against Forge, but Fabric has really jumped the leaderboard in this challenge.
                 Fabric's main aim is to get updates out faster than Forge for versions, and also be way more
                 lightweight; They have indeed succeeded with the latter.</p>
@@ -120,7 +132,50 @@
                             when a snapshot comes out.
                         </th>
                         <th>
+                            The Fabric Discord Server has, at least recently, been known for many
+                            members of the community being offensive towards groups of people they may not necessarily
+                            be part of. The are barely taking any action against people who act that way. This is
+                            causing the main branch of fabric to die off and multiple forks starting to take place.
+                        </th>
+                    </tr>
 
+                    <tr>
+                        <th>
+                            Fabric uses its own mappings system ("Yarn") which comes default with fabric. This is great
+                            because the mappings are open-source and contributions are welcome.
+                        </th>
+                        <th>
+                            In contrast, "Yarn" being Fabric's default mappings means that users are not using
+                            Minecraft's Official Mappings("MojMap") which is a downside because it is best practice to
+                            be using these official mappings.
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            Explicitly supports jar-in-jar mods, meaning that mods can repackage library mods inside
+                            themselves. Note: This does mean that jars can end up being larger in size.
+                        </th>
+                        <th>
+                            Any hooks that fabric makes into vanilla are implemented with mixins, meaning you will not
+                            be able to see whether a fabric hook exists in a location purely by looking at the vanilla
+                            sources. You instead have to look through the fabric source code and find the hook to then
+                            figure out where it is being injected into.
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            Fabric is able to load significantly faster than the likes of Forge and has many FPS
+                            boosting and many optimization mods, meaning that the minimum requirements can be massively
+                            reduced when using Fabric.
+                        </th>
+
+                        <th>
+                            There are many forks of Fabric, and it can be quite confusing to new users to know which
+                            fork they should be using or if one at all. As an example, the recent rise of Quilt has
+                            caused a system where some people would go to Fabric, and then others would re-direct them
+                            to Quilt.
                         </th>
                     </tr>
                 </tbody>
