@@ -6,10 +6,10 @@ body {
 }
 
 :root {
-  --font_color: rgb(200, 200, 200);
-  --nav_background: rgb(22, 22, 32);
-  --background: rgb(22, 22, 22);
-  --section_background: rgb(40, 40, 50);
+  --font_color: rgb(240, 240, 240);
+  --nav_background: rgb(121, 61, 111);
+  --background: rgb(42, 44, 45);
+  --section_background: rgb(49, 51, 56);
   --table_border: rgb(153, 153, 153);
   --table_background: rgb(90, 90, 100);
 }
@@ -29,29 +29,32 @@ body {
   width: 100%;
   background: var(--nav_background);
   margin: 0px;
-  padding: 5px 0px;
+  padding: 6px 0px;
 }
 
 .main-nav {
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
+  z-index: 100;
 }
 
 .main-nav_link {
   margin-right: 25px;
+  font-variant: small-caps;
 }
 
 .site-header {
   background: var(--background);
-  padding: 100px;
-  margin: 68px 0 0;
+  height: 25%;
+  padding-top: 5%;
   text-align: center;
-  background-image: url("/images/background.jpg");
-  font-size: 1.75rem;
+  background-image: url("../../images/test_image.jpeg");
+  font-size: 5rem;
   font-weight: 100;
-  text-shadow: 4px 4px 5px var(--background);
-  color: var(--font_color);
+  text-shadow: 4px 4px 5px var(--nav_background);
+  color: rgb(206, 203, 190);
+  z-index: 0;
 }
 
 .main-content {
