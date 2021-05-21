@@ -19,30 +19,88 @@
     </header>
 
     <main class="main-content">
+        <a id="what_is_minecraft_modding"></a>
         <section class="sections">
             <h2>Welcome</h2>
-            <h3>What is Minecraft Modding?</h3>
-            <p>Minecraft Modding is the act of modifying and making mods for Minecraft. However, Minecraft Modding is
-                not something that should be used for making things such as hacked clients, whilst they are still
-                technically modding, they are modifying the client, and these hacks are not supported by Mojang, or most
-                real modders. In contrary with this lack of hacked client support however, Minecraft Modding with forge
-                or fabric is fully endorsed by Mojang. If you are in doubt, you can always check Mojang's End User
-                License Agreement (EULA for short) which specifies modding is ok as long as it does not redistribute
-                their software or being intended for hacks, griefing or modded clients.
-                If you want to find some information about the history of Minecraft Modding, I recommend reading this
-                great blog by <strong>Aaron Mills</strong>: <a
-                    href="https://hub.packtpub.com/brief-history-minecraft-modding/">here</a>.
+            <h3 class="heading" onclick="location.href='#what_is_minecraft_modding'">What is Minecraft Modding?</h3>
+            <p>Minecraft Modding is the act of modifying and making mods for Minecraft. Minecraft Modding is not
+                something that should be used for making things such as hacked clients, whilst they are still
+                technically modding, they are modifying the client to give users an unfair advantage, and these
+                hacks are not supported by Mojang, or most real modders. In contrary with this lack of hacked client
+                support however, Minecraft Modding with forge or fabric is fully endorsed by Mojang. If you are in
+                doubt, you can always check Mojang's End User License Agreement (EULA for short) which specifies
+                modding is ok as long as it does not redistribute their software or being intended for hacks,
+                griefing or modded clients.
 
-                Modding can include Plugins, Forge Mods, Fabric Mods and to some extent, depending on who you speak to,
-                datapacks. Obviously this is only on the Java Edition side of things. If you head over to Minecraft
-                Bedrock there is the system of add-ons.
+                <br><br>Modding can include Plugins, Forge Mods, Fabric Mods and to some extent, depending on who
+                you speak to, datapacks. Obviously this is only on the Java Edition side of things. If you head over
+                to Minecraft Bedrock there is the system of add-ons.
+
+                <a id="where_to_start"></a>
+                <br><br>If you want to find some information about the history of Minecraft Modding, I recommend
+                reading this great blog by <strong>Aaron Mills</strong>: <a
+                    href="https://hub.packtpub.com/brief-history-minecraft-modding/">here</a>.
             </p>
 
-            <h3>So what should I choose?</h3>
-            <p>Now all of these different types of modding have their pros and cons. So I'm going to try and give a
-                brief description of each, which should hopefully end up leading you to the right sector in terms of
-                making your Minecraft Modification. Here are the options:</p>
-            <h4>Forge</h4>
+            <h3 class="heading" onclick="location.href='#where_to_start'">Where to start?</h3>
+            <img src="../../images/java_logo.svg" height=150></img><br>
+            The first thing you need to know about modding, is that Minecraft Java Edition is written in Java.
+            Whilst this sounds fairly obvious, lots of people think Minecraft is written in Javascript. And as the
+            saying goes, <strong>Java is as similar to Javascript as Car is to Carpet</strong>. In other words, Java
+            is nothing like Javascript.
+
+            <br><br>Once you have wrapped your brain around that hurdle, you need to make sure
+            you learn Java. Once again, this may sound fairly obvious, as you need to know how to code the language
+            that the game you're coding for is written in (unless that game has made a system specifically for
+            modding that uses a different language - this is not Minecraft however). So you need to ensure that you
+            at least know the basics of Java.
+
+            <br><br>If you are one of the people coming to modding thinking that it is a great way
+            to learn Java, I'm here to disappoint you, and tell you that would be wrong and would be a very bad
+            mistake to make. I can say from experience, that it is not a good idea to come into modding with little
+            to know Java experience. Both Minecraft and any Modding API will use beginner, intermediate and advanced
+            concepts in their code-base, and so learning Java from that is extremely difficult.
+
+            <br><br>Instead I recommend you check out one of the, listed below, Java tutorials to <strong>at
+                least</strong> get to grips with the basics of Java and Object Oriented Programming (OOP).<br>
+            <ul>
+                <li>University of Helsinki (free online course): <a href="https://java-programming.mooc.fi/"
+                        target="_blank">https://java-programming.mooc.fi/</a> - My personal recommendation.</li>
+                <li>Official Java Documentation: <a href="https://docs.oracle.com/javase/tutorial/"
+                        target="_blank">https://docs.oracle.com/javase/tutorial/</a></li>
+                <li>Codeacademy (free online course): <a href="https://www.codecademy.com/learn/learn-java"
+                        target="_blank">https://www.codecademy.com/learn/learn-java</a></li>
+                <li>JetBrains Academy (free trial, paid online course): <a href="https://www.jetbrains.com/academy/"
+                        target="_blank">https://www.jetbrains.com/academy/</a></li>
+                <li>Udemy Java for Complete Beginners (free online video series): <a
+                        href="https://www.udemy.com/course/java-tutorial/"
+                        target="_blank">https://www.udemy.com/course/java-tutorial/</a></li>
+                <li>You can also join my <a href="https://discord.gg/d5cGhKQ" target="_blank">Discord Server</a> where
+                    we have a <a
+                        href="https://discord.com/channels/621352915034177566/834182971572617246/834190907921530961"
+                        target="_blank">#java-tutorials</a> channel made by temedy#9458, many thanks to him.</li>
+                <a id="what_to_choose"></a>
+            </ul>
+            <br>Once you have learnt <strong>at least</strong> the basics of Java, you can now choose which Modding API
+            and system that you want to work with.
+            </p>
+
+            <h3 class="heading" onclick="location.href='#what_to_choose'">So what should I choose?</h3>
+            <p>There are many different types of Modding APIs and each have their pros and cons. So I'm going to try and
+                give a brief description of each, which should hopefully end up leading you to the right sector in terms
+                of making your Minecraft Modification.</p>
+
+            <h4>Websites</h4>
+            <p>
+                Forge: <a href="https://github.com/MinecraftForge/MinecraftForge"
+                    target="_blank">github.com/MinecraftForge/</a><br>
+                Fabric: <a href="https://fabricmc.net/" target="_blank">fabricmc.net/</a><br>
+                LiteLoader: <a href="http://www.liteloader.com/" target="_blank">liteloader.com/</a>
+            </p>
+
+            <a id="what_to_choose#forge"></a>
+            <h4 class="heading" onclick="location.href='#what_to_choose#forge'">Forge</h4>
+            <img src="../../images/forge_logo.svg" height=150></img>
             <p>Forge is the classic, and most well known loader and API for making and playing mods, it also
                 gives you the ability to modify and add anything you like to Minecraft.
                 <br><br>Forge has a huge player base compared to its opponents, and has existed all the way since around
@@ -107,7 +165,9 @@
                 </tbody>
             </table>
 
-            <h4>Fabric</h4>
+            <a id="what_to_choose#fabric"></a>
+            <h4 class="heading" onclick="location.href='#what_to_choose#fabric'">Fabric</h4>
+            <img src="../../images/fabric_logo.svg" height=150></img>
             <p>Fabric is a fairly new Mod Loader and API for modding Minecraft. Fabric started development during 1.12
                 due to the massive delay between updates. Since Forge then struggled to update from 1.12, it further
                 boosted the development of Fabric as they knew it would gain some traction. There have been many, many
@@ -181,16 +241,11 @@
                 </tbody>
             </table>
 
-            <h3>Websites</h3>
-            <p>
-                Forge: <a href="https://github.com/MinecraftForge/MinecraftForge"
-                    target="_blank">github.com/MinecraftForge/</a><br>
-                Fabric: <a href="https://fabricmc.net/" target="_blank">fabricmc.net/</a><br>
-                LiteLoader: <a href="http://www.liteloader.com/" target="_blank">liteloader.com/</a>
-            </p>
-
-
-            <h4>Plugins</h4>
+            <a id="what_to_choose#plugins"></a>
+            <h4 class="heading" onclick="location.href='#what_to_choose#plugins'">Plugins</h4>
+            <img src="../../images/spigot_logo.svg" height=150></img>
+            <img src="../../images/paper_logo.svg" height=150></img>
+            <img src="../../images/sponge_logo.svg" height=150></img>
             <p>
                 When it comes to modding, APIs such as CraftBukkit and SpigotMC/PaperMC are often suggested to users.
                 Whilst these are perfectly valid APIs for modding, they likely do not produce the sort of thing you
@@ -218,16 +273,93 @@
 
                 <br>
             </p>
-            <h3>Websites</h3>
+            <h4>Websites</h4>
             <p>
                 Sponge: <a href="https://www.spongepowered.org/" target="_blank">spongepowered.org/</a><br>
                 PaperMC: <a href="https://papermc.io/" target="_blank">papermc.io/</a><br>
                 SpigotMC: <a href="https://www.spigotmc.org/" target="_blank">spigotmc.org/</a><br>
                 Waterfall: <a href="https://papermc.io/downloads#Waterfall"
                     target="_blank">papermc.io/waterfall/</a><br>
+                <a id="what_can_be_found"></a>
                 BungeeCord: <a href="https://www.spigotmc.org/wiki/bungeecord/"
                     target="_blank">spigotmc.org/bungeecord/</a><br>
                 Velocity: <a href="https://www.velocitypowered.com/" target="_blank">velocitypowered.com/</a>
+            </p>
+
+            <h3 class="heading" onclick="location.href='#what_can_be_found'">So what tutorials can be found here?</h3>
+            <p>
+                I will be covering tutorials only for Forge Modding, as that is the modding system that I use. You can
+                view my tutorials on the <a href="../tutorials.html">previous page</a>.<br><br>
+
+                For tutorials regarding other modding systems, I will link a few good ones here:<br><br>
+
+                Fabric:<br>
+                <a href="https://fabricmc.net/wiki/tutorial:introduction" target="_blank">Fabric Wiki</a><br>
+                <a href="https://www.youtube.com/playlist?list=PLHTNHyaaUBPYq-lKVfrtkjXaGn9UGS3Iq"
+                    target="_blank">Draylar's Fabric Tutorials</a><br>
+                <a href="https://www.youtube.com/playlist?list=PLtlFYEU3W_IETs8A9ei01mSxYV5a0nXCp"
+                    target="_blank">TotallyGamerJet's Fabric Tutorials</a><br>
+                <a href="https://www.youtube.com/playlist?list=PLDhiRTZ_vnoVKPsdTLORpcRnQ50fRdb-S"
+                    target="_blank">TechnoVision's Fabric Tutorials</a><br><br>
+
+                Sponge:<br>
+                <a href="https://docs.spongepowered.org/stable/en/plugin/index.html" target="_blank">Sponge Docs</a><br>
+                <a href="https://www.youtube.com/playlist?list=PLGqUurDwlOGfmRM_UkAVR0xrvIi9B6BQN"
+                    target="_blank">sibomots's SpongeForge Setup</a><br>
+                <a href="https://www.youtube.com/playlist?list=PLGk6jyoudTVZSIN8xz9h0yCaK2c6uh0Fh"
+                    target="_blank">Hunter Sharpe's Sponge Basics</a><br><br>
+
+                Spigot/Bukkit/Paper:<br>
+                <a href="https://www.spigotmc.org/wiki/spigot/" target="_blank">SpigotMC Wiki</a><br>
+                <a href="https://bukkit.fandom.com/wiki/Main_Page" target="_blank">Bukkit Wiki</a><br>
+                <a href="https://paper.readthedocs.io/en/latest/" target="_blank">PaperMC Wiki</a> / <a
+                    href="https://papermc.io/javadocs" target="_blank">PaperMC Javadocs</a><br>
+                <a href="https://www.youtube.com/playlist?list=PLfu_Bpi_zcDNEKmR82hnbv9UxQ16nUBF7" target="_blank">Kody
+                    Simpson's Spigot Tutorials</a><br>
+                <a href="https://www.youtube.com/playlist?list=PLDhiRTZ_vnoUvdrkTnaWP_hPmbj2JfPAF"
+                    target="_blank">TechnoVision's Spigot Tutorials</a><br>
+                <a href="https://www.youtube.com/playlist?list=PLfu_Bpi_zcDNEKmR82hnbv9UxQ16nUBF7" target="_blank">Kody
+                    Simpson's Spigot Tutorials</a><br>
+                CodedRed's Spigot Tutorials:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<a
+                    href="https://www.youtube.com/playlist?list=PL65-DKRLvp3ZO2i1OK0tfRsZt-glkBpUV"
+                    target="_blank">Advanced 1.16</a><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<a
+                    href="https://www.youtube.com/playlist?list=PL65-DKRLvp3ZO63cYW86Sm920BiDb2gBa" target="_blank">1.15
+                    Advanced</a><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<a
+                    href="https://www.youtube.com/playlist?list=PL65-DKRLvp3Yn7iglPfxKoc7bl0N80XgG" target="_blank">1.15
+                    Basic</a><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<a
+                    href="https://www.youtube.com/playlist?list=PL65-DKRLvp3bpcZT9uIJWtrt9EMAT6T6-"
+                    target="_blank">1.14</a><br><br>
+
+                Forge:<br>
+                <a href="https://mcforge.readthedocs.io/en/1.16.x/" target="_blank">Official Forge Documentation</a> -
+                Covers few concepts, lacking major parts of modding but goes into lots of detail in the topics that it
+                does cover.<br>
+                <a href="https://forge.gemwire.uk/" target="_blank">Forge Community Wiki</a> - Covers more
+                topics than the official documentation with good explanations, but still lacks some major parts of
+                modding. It's also open source, meaning anyone can contribute to the wiki.<br><br>
+                <a href="https://www.youtube.com/playlist?list=PLRmyO3P6G-XhvYL8LxL4AZ-PbBKyPPcgm"
+                    target="_blank">Cryness's Forge Tutorials</a> - Covers a wide range of topics with good explanations
+                and good code practices.<br><br>
+                <a href="https://youtube.com/playlist?list=PLmaTwVFUUXiDRjPTbDmBgJZN4MeQ5uYby" target="_blank">McJty's
+                    Forge Tutorials</a> - Very detailed explanations, covers advanced topics. Some of these tutorials
+                are outdated.<br><br>
+                <a href="https://www.youtube.com/playlist?list=PLaevjqy3XufYmltqo0eQusnkKVN7MpTUe"
+                    target="_blank">TurtyWurty's Old Forge 1.15 Tutorials </a> - Covers all the way up from basic to
+                advanced concepts with detailed explanations, but the videos are long and some specific videos introduce
+                major bad code practices. These tutorials are mostly outdated.<br><br>
+                <a href="https://youtube.com/playlist?list=PLlbkaeFHn13HQlW5Pb7Gf-xLJoAlfVbNU" target="_blank">Cy4's
+                    Forge Tutorials</a> - Basic introductions to important concepts, but has some major (and minor)
+                issues in a few tutorials. Some of these tutorials are outdated.<br><br>
+                <a href="https://youtube.com/playlist?list=PL_A3Jq4AHpVu6V6elaTRTk5fUCKRDHK2g" target="_blank">Mr
+                    Pineapple's Forge Tutorials</a> - Very quick and fast on a wide variety of topics. Most of these
+                tutorials are outdated.<br><br>
+                <a href="https://www.youtube.com/playlist?list=PLDhiRTZ_vnoWsCqtoG1X1MbGY5xATTadb"
+                    target="_blank">TechnoVision's Old Forge 1.15/1.16 Tutorials</a> - Covers the basics to making a mod
+                but has some major (and minor) issues in some of the tutorials. These tutorials are mostly outdated.<br>
             </p>
         </section>
     </main>

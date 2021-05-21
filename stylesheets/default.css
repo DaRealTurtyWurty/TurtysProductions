@@ -34,6 +34,7 @@ body {
   background: var(--nav_background);
   margin: 0px;
   padding: 6px 0px;
+  z-index: 100;
 }
 
 .main-nav {
@@ -84,13 +85,11 @@ body {
 .main-nav_link a.active:hover {
   transition: color 0.3s;
   color: var(--font_color);
-  font-weight: 600;
 }
 
 .main-nav_link a.inactive:hover {
   transition: color 0.3s;
   color: var(--font_color);
-  font-weight: 600;
 }
 
 .sections {
@@ -157,4 +156,86 @@ a {
 
 .introduction-blurb {
   margin-top: 0px;
+}
+
+.code {
+  position: absolute;
+  color: var(--font_color);
+  transform: rotate3d(0.5, 2, 0, 35deg);
+  width: 150%;
+  height: 300%;
+  top: -20%;
+  left: 5%;
+  z-index: 1;
+  text-shadow: none;
+  font-size: 25px;
+  background-color: #575454;
+  opacity: 0.75;
+}
+
+.main {
+  position: relative;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #222222;
+  border-radius: 3px;
+  width: 100%;
+  height: 300px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.mymods {
+  margin-top: -2px;
+}
+
+img {
+  transform: translate(100, 100);
+  width: 100%;
+  height: 100%;
+  opacity: 100;
+}
+
+.divider {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.titleText {
+  position: absolute;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 20px 30px;
+  z-index: 4;
+  text-shadow: none;
+  color: var(--font_color);
+}
+
+.mainText {
+  position: absolute;
+  width: 35%;
+  font-size: 35px;
+  margin: 85px 30px;
+  z-index: 4;
+  text-shadow: none;
+  text-align: left;
+  color: var(--font_color);
+}
+
+.clickButton {
+  position: absolute;
+  left: 10%;
+  bottom: 10px;
+  color: var(--font_color);
+  background-color: #7771a4;
+  border-color: #a69eff;
+  border-radius: 10px;
+  width: 500px;
+  height: 75px;
+  font-size: 50px;
+  z-index: 3;
 }

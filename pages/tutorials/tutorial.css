@@ -6,7 +6,7 @@ body {
 }
 
 :root {
-  --font_color: rgb(240, 240, 240);
+  --font_color: rgb(200, 200, 220);
   --nav_background: rgb(121, 61, 111);
   --background: rgb(42, 44, 45);
   --section_background: rgb(49, 51, 56);
@@ -79,13 +79,11 @@ body {
 .main-nav_link a.active:hover {
   transition: color 0.3s;
   color: var(--font_color);
-  font-weight: 600;
 }
 
 .main-nav_link a.inactive:hover {
   transition: color 0.3s;
   color: var(--font_color);
-  font-weight: 600;
 }
 
 .sections {
@@ -132,4 +130,57 @@ table td {
 
 a {
   color: var(--font_color);
+}
+
+.tutorial-tree ul,
+#tutorials {
+  list-style-type: none;
+  border-left: 1px solid white;
+  margin-left: 5px;
+  padding-left: 20px;
+  font-size: 22px;
+  font-family: sans-serif;
+}
+
+#tutorials {
+  margin: 0;
+  padding: 20;
+}
+
+.tree {
+  text-decoration: none;
+}
+
+.caret {
+  cursor: pointer;
+  user-select: none;
+}
+
+.caret::before {
+  content: "\00BB";
+  color: white;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+h3.heading:hover {
+  text-decoration: underline;
+}
+
+h4.heading:hover {
+  text-decoration: underline;
 }
