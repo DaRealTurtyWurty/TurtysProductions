@@ -20,7 +20,281 @@
 
     <main class="main-content">
         <section class="sections">
+            <h2>Naming Conventions</h2>
+            <a id="java_naming_conventions"></a>
+            <p>When it comes to naming things, we want to make sure we are naming everything in our mod using the right
+                conventions. The main reason we use these conventions is to keep some consistency within people's code,
+                making the jump of looking at one person's code to looking at another persons code much smaller and
+                easier to handle.</p>
 
+            <h3 class="heading" onclick="location.href='#java_naming_conventions'">Java Naming Conventions</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            Convention
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Invalid Example
+                        </th>
+                        <th>
+                            Valid Example
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Projects
+                        </th>
+                        <th>
+                            Upper Camel Case (Pascal Case)
+                        </th>
+                        <th>
+                            Should be a name that can easily explain what your project is for. Should always start with
+                            a capital letter; Any subsequent words should also start with a capital letter. Generally,
+                            this will be a noun.
+                        </th>
+                        <th>
+                            <code><pre>largevoidmod
+largeVoidMod
+Large_Void_Mod
+                            </code></pre>
+                        </th>
+                        <th>
+                            <code>LargeVoidMod</code>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Packages
+                        </th>
+                        <th>
+                            Snake Case
+                        </th>
+                        <th>
+                            Should always be lowercase and should not contain any special symbols other than underscores
+                            (_). Should well describe what is inside of that package. The starting packages of a project
+                            should be any website you have, followed by the name of the project. For example
+                            <code>com.google.gson</code>. If you do not own a domain, you should use your github or
+                            similar url. For example <code>io.github.username.projectname</code>.
+                        </th>
+                        <th>
+                            <code><pre>io.github.darealturtywurty.largeVoidMod
+io.github.darealturtywurty.LargeVoidMod
+                            </code></pre>
+                        </th>
+                        <th>
+                            <code><pre>io.github.darealturtywurty.large_void_mod
+io.github.darealturtywurty.largevoidmod
+                            </code></pre>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Classes, Interfaces, Enums and Records
+                        </th>
+                        <th>
+                            Upper Camel Case (Pascal Case)
+                        </th>
+                        <th>
+                            Should always start with a capital letter; Any subsequent words should also start with a
+                            capital letter. Acronyms should not be used unless it would prevent an extremely long class
+                            name (any more than 24 characters is unacceptable). This should always be a noun and should
+                            well describe what this Class does.
+                        </th>
+                        <th>
+                            <code><pre>voideater.java
+voidEater.java
+Void_Eater.java
+                            </code></pre>
+                        </th>
+                        <th>
+                            <code>VoidEater.java</code>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Interfaces
+                        </th>
+                        <th>
+                            Upper Camel Case (Pascal Case)
+                        </th>
+                        <th>
+                            Should always start with a capital letter; Any subsequent words should also start with a
+                            capital letter. Acronyms should not be used unless it would prevent an extremely long class
+                            name (any more than 24 characters is unacceptable).<br>
+                            This should always be an adjective and should describe the implication of the effects you
+                            would get from implementing.<br>
+                        </th>
+                        <th>
+                            <code><pre>supershiny.java
+superShiny.java
+Super_Shiny.java
+                            </code></pre>
+                        </th>
+                        <th>
+                            <code>SuperShiny.java</code>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Enums and Records
+                        </th>
+                        <th>
+                            Upper Camel Case (Pascal Case)
+                        </th>
+                        <th>
+                            Should always start with a capital letter; Any subsequent words should also start with a
+                            capitalized letter. Acronyms should not be used unless it would prevent an extremely long
+                            class name (any more than 24 characters is unacceptable). This should always be an noun and
+                            should describe what the Enum or Record Contains.
+                        </th>
+                        <th>
+                            <code><pre>voidparts.java
+voidParts.java
+Void_Parts.java
+                            </code></pre>
+                        </th>
+                        <th>
+                            <code>VoidParts.java</code>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Methods
+                        </th>
+                        <th>
+                            Camel Case
+                        </th>
+                        <th>
+                            Methods should always start with a lowercase letter; Any subsequent words should start with
+                            a capitalized letter. Methods should be a verb and need to very well describe what the
+                            function of such method is. Long method names should however be avoided when possible.
+                            Method names should not start with <code>$</code> or numbers even though they can.
+                        </th>
+                        <th>
+                            <pre><code>applyvoideffect();
+ApplyVoidEffect();
+apply_void_effect();
+apply_Void_Effect();
+                        </code></pre>
+                        </th>
+                        <th>
+                            <code>applyVoidEffect();</code>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Variables
+                        </th>
+                        <th>
+                            Camel Case
+                        </th>
+                        <th>
+                            Variables should always start with a lowercase letter; Any subsequent words should start
+                            with a capitalized letter. It is very important that variables have descriptive but short
+                            names to describe the object/value that they will be holding. Any single letter variables
+                            should not be used even in the instance of loops. Variables should not start with
+                            <code>$</code> or numbers even though they can.
+                        </th>
+                        <th>
+                            <pre><code>private int voidcount;
+private int VoidCount;
+private int void_count;
+private int void_Count;
+                            </code></pre>
+                        </th>
+                        <th>
+                            <code>private int voidCount;</code>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Static Final Fields (Constants)
+                        </th>
+                        <th>
+                            Upper Snake Case
+                        </th>
+                        <th>
+                            Constants should be fully capitalized and before the start of a new word should be an
+                            underscore (_). It is very important that constants have descriptive but short names to
+                            describe the object/value that they will be holding. Any single letter constants should not
+                            be used even in the instance of loops. Constants should not start with <code>$</code> or
+                            numbers even though they can.
+                        </th>
+                        <th>
+                            <code><pre>private static final int maxvoids = 5;
+private static final int MaxVoids = 5;
+private static final int max_voids = 5;
+private static final int max_Voids = 5;
+private static final int maxVoids = 5;
+                            </code></pre>
+                        </th>
+                        <th>
+                            <code>private static final int MAX_VOIDS = 5;</code>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a id="modding_naming_conventions"></a>
+            You can view more information about the java naming conventions <a
+                href="https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html"
+                target="_blank">here</a>.<br><br>
+
+            <h3 class="heading" onclick="location.href='#modding_naming_conventions'">Modding-Specific Naming
+                Conventions</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            ModID
+                        </th>
+                        <th>
+                            The ModID must be all lowercase and unique. To make a ModID unique, it should be the name of
+                            the mod and optionally can contain the author's username. ModIDs can contain numbers,
+                            lowercase letters, underscores and dashes. An example of a valid ModID is
+                            <code>largevoidmod</code> or <code>large_void_mod</code>. An example of an invalid ModID is
+                            <code>LargeVoidMod</code> or <code>4g%*lgf'#~</code>.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            ResourceLocations and Registration Names
+                        </th>
+                        <th>
+                            ResourceLocations and Registration Names must be all lowercase and can only contain numbers,
+                            lowercase letters, underscores, dashes and forward slashes. Usually, new words are separated
+                            by an underscore. An example of a valid entry is <code>void_apple</code> or
+                            <code>apples/void_apple</code>. An example of an invalid entry is <code>VoidApple</code>
+                            or <code>gf%*{}:.jdf</code>.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Class Naming
+                        </th>
+                        <th>
+                            When constructing the name of a class, it is highly recommended to suffix the name with the
+                            type of object. For example if we wanted a void block, we could put <code>VoidBlock</code>.
+                            An unrecommended example of a class name would be <code>BlockVoid</code>.
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 </body>
